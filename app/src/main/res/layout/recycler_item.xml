@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/border_around"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/first_team_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <ImageView
+                android:id="@+id/second_team_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/second_team_img"
+                app:layout_constraintStart_toEndOf="@+id/first_team_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.538"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_img">
+
+            <TextView
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="16dp"
+                android:text="Home"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/away"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="84dp"
+                android:text="Away"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/first_team_name"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="GSDHSDDSG"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/home"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="@+id/home"
+                app:layout_constraintTop_toBottomOf="@+id/home"
+                app:layout_constraintVertical_bias="0.0"></TextView>
+
+            <TextView
+                android:id="@+id/second_team_name"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="GSDHSDDSG"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/away"
+                app:layout_constraintStart_toEndOf="@+id/away"
+                app:layout_constraintStart_toStartOf="@+id/away"
+                app:layout_constraintTop_toBottomOf="@+id/away"></TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/textView_league"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTextView" />
+
+        <TextView
+            android:id="@+id/textView_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_league" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_status">
+
+            <TableRow
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="10sp"
+                    android:layout_weight="1">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/title_quarter1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quarter 1"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/title_quarter2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="Quarter 2"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/title_quarter3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="Quarter 3"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/title_quarter4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="Quarter 4"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/title_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="Total"
+                    android:textSize="10sp"
+                    android:layout_weight="2"></TextView>
+
+            </TableRow>
+            <TableRow
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/name_quarter_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_weight="1">
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/value_quarter1_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/value_quarter2_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/value_quarter3_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/value_quarter4_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/total_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="28dp"
+                    android:textSize="10sp"
+                    android:layout_weight="2"></TextView>
+            </TableRow>
+            <TableRow
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/name_quarter_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Away"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_weight="1">
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/value_quarter1_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/value_quarter2_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/value_quarter3_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/value_quarter4_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_weight="1"></TextView>
+
+                <TextView
+                    android:id="@+id/total_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_weight="2"></TextView>
+            </TableRow>
+
+        </TableLayout>
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
