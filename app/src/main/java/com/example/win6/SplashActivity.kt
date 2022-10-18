@@ -24,6 +24,7 @@ class SplashActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                finish()
             }
 
         }
